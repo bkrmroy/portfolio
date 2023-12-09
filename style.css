@@ -1,0 +1,114 @@
+html {
+	margin: 0;
+	padding: 0;
+	--title-font: "Plafair display", serif;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+    gap: 48px;
+}
+.dev-name {
+	font-family: var(--title-font);
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: white;
+	margin: 0;
+	bottom: 0;
+}
+header {
+	display: flex;
+	/* padding: 16px; */
+	justify-content: center;
+
+	align-items: center;
+}
+.introduction {
+	/* max-width: 600px; */
+	/* border: 2px solid black; */
+	padding: 16px;
+	padding-left: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	-webkit-box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.48);
+	box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.48);
+}
+.about-me {
+	font-size: 2.5rem;
+}
+.about-me-text {
+	font-size: 1.5rem;
+}
+.dev-img-container {
+	position: relative;
+	min-width: 400px;
+	min-height: 400px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	max-width: 500px;
+	border: 2px solid black;
+	background-image: url("./images/takao.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
+	box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
+	border-radius: 8px;
+}
+.links {
+	display: flex;
+	justify-content: end;
+	gap: 16px;
+}
+
+.my-work {
+	margin: 0;
+	font-size: 2.5rem;
+
+	/* font-family: var(--title-font); */
+}
+.projects {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 64px;
+    justify-items: center;
+}
+.project {
+	/* border: 1px solid black; */
+    -webkit-box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
+	box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
+	border-radius: 8px;
+    /* max-width: 400px; */
+}
+.project-screenshot-container {
+    height: 200px;
+	background-image: url(./images/blue.jpg);
+    background-size: cover;
+}
+.project-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+.project-title{
+    font-size: 1.5rem;
+}
+.project-description{
+    margin-bottom: 48px;
+}
+.project-links{
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+}
+.dummy{
+    display: none;
+}
+.my-work{
+    margin-bottom: 16px;
+}
