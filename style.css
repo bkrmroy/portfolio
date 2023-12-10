@@ -2,13 +2,17 @@ html {
 	margin: 0;
 	padding: 0;
 	--title-font: "Plafair display", serif;
+	height: 100%;
 }
 body {
 	font-family: "Roboto", sans-serif;
-	display: flex;
+	display: grid;
+	grid-template-rows: 1fr 2fr auto;
 	flex-direction: column;
-	padding: 16px;
-    gap: 48px;
+	padding: 0;
+	/* gap: 48px; */
+	margin: 0;
+	min-height: 100%;
 }
 .dev-name {
 	font-family: var(--title-font);
@@ -20,7 +24,7 @@ body {
 }
 header {
 	display: flex;
-	/* padding: 16px; */
+	padding: 32px;
 	justify-content: center;
 
 	align-items: center;
@@ -28,6 +32,7 @@ header {
 .introduction {
 	/* max-width: 600px; */
 	/* border: 2px solid black; */
+	max-height: 350px;
 	padding: 16px;
 	padding-left: 24px;
 	display: flex;
@@ -42,7 +47,8 @@ header {
 .about-me-text {
 	font-size: 1.5rem;
 }
-.dev-img-container {
+.dev-img-container,
+.footer-img-container {
 	position: relative;
 	min-width: 400px;
 	min-height: 400px;
@@ -51,7 +57,7 @@ header {
 	justify-content: center;
 	align-items: end;
 	max-width: 500px;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	background-image: url("./images/takao.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -59,6 +65,7 @@ header {
 	box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
 	border-radius: 8px;
 }
+
 .links {
 	display: flex;
 	justify-content: end;
@@ -68,47 +75,90 @@ header {
 .my-work {
 	margin: 0;
 	font-size: 2.5rem;
-
+	font-family: var(--title-font);
 	/* font-family: var(--title-font); */
 }
 .projects {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 64px;
-    justify-items: center;
+	justify-items: center;
 }
 .project {
 	/* border: 1px solid black; */
-    -webkit-box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
+	-webkit-box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
 	box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
 	border-radius: 8px;
-    /* max-width: 400px; */
+	/* max-width: 400px; */
 }
 .project-screenshot-container {
-    height: 200px;
+	height: 200px;
 	background-image: url(./images/blue.jpg);
-    background-size: cover;
+	background-size: cover;
 }
-.project-info{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 16px;
+.project-info {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 16px;
 }
-.project-title{
-    font-size: 1.5rem;
+.project-title {
+	font-size: 2rem;
+	font-family: var(--title-font);
 }
-.project-description{
-    margin-bottom: 48px;
+.project-description {
+	margin-bottom: 48px;
 }
-.project-links{
-    display: flex;
-    justify-content: end;
-    gap: 16px;
+.project-links {
+	display: flex;
+	justify-content: end;
+	gap: 16px;
 }
-.dummy{
-    display: none;
+.dummy {
+	display: none;
 }
-.my-work{
-    margin-bottom: 16px;
+.my-work {
+	margin-bottom: 16px;
+}
+footer {
+	background-color: #0891b2;
+	display: flex;
+	padding: 32px;
+	justify-content: space-between;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	/* align-items: center; */
+}
+main {
+	padding: 32px;
+}
+.contact-info{
+	color: white;
+}
+.contact-me{
+	margin-bottom: 0;
+	font-size: 2.5rem;
+	font-weight: 500;
+	font-family: var(--title-font);
+}
+.footer-img-container {
+	background-image: url(./images/sleeping.gif);
+	min-width: 400px;
+	min-height: 300px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+button{
+	background: none;
+	border: none;
+}
+button:hover{
+	cursor: pointer;
+	scale: 1.2;
+}
+a{
+	text-decoration: none;
+}
+.github-icon{
+	height: 32px;
 }
