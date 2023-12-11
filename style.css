@@ -7,7 +7,7 @@ html {
 body {
 	font-family: "Roboto", sans-serif;
 	display: grid;
-	grid-template-rows: 1fr 2fr auto;
+	grid-template-rows: auto auto auto;
 	flex-direction: column;
 	padding: 0;
 	/* gap: 48px; */
@@ -17,7 +17,7 @@ body {
 .dev-name {
 	font-family: var(--title-font);
 	font-size: 3.5rem;
-	font-weight: bold;
+	font-weight: 600;
 	color: white;
 	margin: 0;
 	bottom: 0;
@@ -80,7 +80,7 @@ header {
 }
 .projects {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 64px;
 	justify-items: center;
 }
@@ -90,11 +90,17 @@ header {
 	box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.48);
 	border-radius: 8px;
 	/* max-width: 400px; */
+	width: 100%;
+	height: fit-content;
 }
 .project-screenshot-container {
 	height: 200px;
-	background-image: url(./images/blue.jpg);
-	background-size: cover;
+	background-size: contain;
+	border-radius: 8px 8px 0px 0px;
+	background-repeat: no-repeat;
+}
+.project-screenshot-container.to-do-list {
+	background-image: url(./images/project-images/to-do-list.png);
 }
 .project-info {
 	display: flex;
@@ -123,6 +129,7 @@ header {
 footer {
 	background-color: #0891b2;
 	display: flex;
+	margin-top: 48px;
 	padding: 32px;
 	justify-content: space-between;
 	grid-row-start: 3;
@@ -132,10 +139,10 @@ footer {
 main {
 	padding: 32px;
 }
-.contact-info{
+.contact-info {
 	color: white;
 }
-.contact-me{
+.contact-me {
 	margin-bottom: 0;
 	font-size: 2.5rem;
 	font-weight: 500;
@@ -148,17 +155,36 @@ main {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-button{
+button {
 	background: none;
 	border: none;
 }
-button:hover{
+button:hover {
 	cursor: pointer;
 	scale: 1.2;
 }
-a{
+a {
 	text-decoration: none;
 }
-.github-icon{
+.github-icon {
 	height: 32px;
+}
+.github-icon.footer-icon {
+	color: white;
+}
+a > svg {
+	height: 32px;
+}
+.project-screenshot-container.library{
+	background-image: url(./images/project-images/library.png);
+}
+.project-screenshot-container.admin-dashboard{
+	background-image: url(./images/project-images/admin-dashboard.png);
+}
+.project-screenshot-container.calculator{
+	background-image: url(./images/project-images/calculator.png);
+	background-size: cover;
+}
+.project-screenshot-container{
+	background-size: cover;
 }
