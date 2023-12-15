@@ -26,13 +26,12 @@ header {
 	display: flex;
 	padding: 32px;
 	justify-content: center;
-
+	position: relative;
 	align-items: center;
 }
+.dev-img-container {
+}
 .introduction {
-	/* max-width: 600px; */
-	/* border: 2px solid black; */
-	max-height: 350px;
 	padding: 16px;
 	padding-left: 24px;
 	display: flex;
@@ -134,6 +133,7 @@ footer {
 	justify-content: space-between;
 	grid-row-start: 3;
 	grid-row-end: 4;
+	gap: 32px;
 	/* align-items: center; */
 }
 main {
@@ -150,8 +150,8 @@ main {
 }
 .footer-img-container {
 	background-image: url(./images/sleeping.gif);
-	min-width: 400px;
-	min-height: 300px;
+	min-width: 500px;
+	min-height: 350px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -175,16 +175,59 @@ a {
 a > svg {
 	height: 32px;
 }
-.project-screenshot-container.library{
+.project-screenshot-container.library {
 	background-image: url(./images/project-images/library.png);
 }
-.project-screenshot-container.admin-dashboard{
+.project-screenshot-container.admin-dashboard {
 	background-image: url(./images/project-images/admin-dashboard.png);
 }
-.project-screenshot-container.calculator{
+.project-screenshot-container.calculator {
 	background-image: url(./images/project-images/calculator.png);
 	background-size: cover;
 }
-.project-screenshot-container{
+.project-screenshot-container {
 	background-size: cover;
+}
+@media (max-width: 950px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+	.introduction {
+		margin-left: 00;
+	}
+	.dev-img-container {
+		/* position:fixed; */
+		margin: 32px;
+	}
+	.footer-img-container {
+		min-width: 400px;
+		min-height: 300px;
+	}
+}
+@media (max-width: 700px) {
+	.footer-img-container {
+		min-width: 300px;
+		min-height: 200px;
+	}
+}
+@media (max-width: 600px) {
+	.dev-img-container {
+		min-width: 350px;
+		min-height: 350px;
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
+	}
+	.footer-img-container {
+		min-width: 400px;
+		min-height: 300px;
+	}
+}
+.project-screenshot-container.etch-a-sketch{
+	background-image: url(./images/project-images/etch-a-sketch.png);
 }
