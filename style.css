@@ -32,6 +32,8 @@ header {
 .dev-img-container {
 }
 .introduction {
+	background-color: white;
+	color: black;
 	padding: 16px;
 	padding-left: 24px;
 	display: flex;
@@ -194,6 +196,7 @@ a > svg {
 		flex-direction: column;
 		position: relative;
 	}
+
 	.introduction {
 		margin-left: 00;
 	}
@@ -228,6 +231,49 @@ a > svg {
 		min-height: 300px;
 	}
 }
-.project-screenshot-container.etch-a-sketch{
+.project-screenshot-container.etch-a-sketch {
 	background-image: url(./images/project-images/etch-a-sketch.png);
+}
+.project-screenshot-container.tic-tac-toe {
+	background-image: url(./images/project-images/tic-tac-toe.png);
+	background-position: center;
+}
+.project-screenshot-container.odin-restaurant-page {
+	background-image: url(./images/project-images/restaurant.png);
+}
+
+header {
+	position: relative;
+}
+/* header::after {
+	content: '';
+	background-color: #0891b2;
+	position: absolute;
+	height: 50%;
+	inset: 0;
+	top: 100px;
+	z-index: -1;
+	transform: skewY(-5deg);
+} */
+.shapes {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+.cut-out {
+	background-color: #0891b2;
+	height: 90%;
+	width: 100%;
+	clip-path: polygon(0 0, 100% 0, 100% 48%, 0 76%);
+
+}
+@media (max-width: 700px) {
+	.cut-out {
+		background-color: #0891b2;
+		height: 50%;
+		width: 100%;
+		clip-path: none;
+	}
 }
